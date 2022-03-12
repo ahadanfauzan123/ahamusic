@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply font-body bg-black scrollbar-hide;
+    @apply bg-black scrollbar-hide;
   }
 }
 @layer components {
@@ -17,8 +17,27 @@
   .tag {
     @apply py-1.5 px-3 text-[#cecece] bg-[#282828] rounded-xl text-xs font-bold border-2 border-[#484848];
   }
+  .genre {
+    @apply bg-[#101010] text-[#CECECE] border border-[#484848] rounded-xl py-2.5 px-3.5 text-[11px] font-bold cursor-default;
+  }
+  .btn {
+    @apply text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out;
+  }
+  .icon {
+    @apply hover:scale-125 transition-all duration-150 ease-out;
+  }
+  .croppedIcon {
+    clip-path: inset(0 50% 0 0);
+  }
+
+  .playerIcon {
+    @apply transition ease-out transform hover:scale-105 hover:text-white;
+  }
 }
 
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+}
 
 
 
@@ -39,4 +58,16 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+
+@media (min-width: 400px) {
+  .posterContainer {
+    display: grid;
+    grid-template-columns: 1;
+  }
+  .poster {
+    width: 300px;
+  }
 }

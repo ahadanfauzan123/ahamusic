@@ -11,12 +11,12 @@ function Poster({track, chooseTrack}) {
         chooseTrack(track);
 
         if(track.uri === playingTrack.uri) {
-            setPlay(!play);
+            setPlay(!play); 
         }
     }
   
     return (
-    <div className='w-[220px] h-[360px] rounded-[40px] overflow-hidden relative text-white/80 cursor-pointer
+    <div className=' poster w-[220px] h-[360px] sm:w-[240px] md:w-[300px] lg:w-[280px] xl:w-[220px] rounded-[40px] overflow-hidden relative text-white/80 cursor-pointer
      hover:scale-105 hover:text-white/100 
     transition duration-200 ease-out group mx-auto' onClick={handlePlay}>
         <img src={track.albumUrl} alt=""
