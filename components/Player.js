@@ -98,12 +98,13 @@ function Player({trackUri, accessToken}) {
     token={accessToken}
     showSaveIcon
     callback={(state) => {
+      
       setPlay(state.isPlaying);
     }}
     play={play}
     uris={trackUri ? [trackUri] : []}
     magnifySliderOnHover={true}
-    autoPlay={false}
+    autoPlay={true}
   />
 
 </>
